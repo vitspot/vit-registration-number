@@ -1,5 +1,5 @@
 {
-  "name": "vit-registration-number",
+  "name": "@vitspot/vit-registration-number",
   "version": "1.0.0",
   "description": "quickly operate on registration numbers across vit",
   "main": "dist/app.js",
@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc src/app.ts --outfile dist/app.ts",
+    "build": "tsc",
     "run:watch": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/app.ts"
   }
 }
