@@ -1,6 +1,6 @@
 {
-  "name": "@vitspot/vit-registration-number",
-  "version": "1.0.1",
+  "name": "@acmvit/vit-registration-number",
+  "version": "1.0.0",
   "description": "quickly operate on registration numbers across vit",
   "main": "dist/app.js",
   "repository": "https://github.com/YashKumarVerma/vit-registration-number",

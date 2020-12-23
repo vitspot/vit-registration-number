@@ -6,13 +6,13 @@ Ever wanted to quickly validate and read data off a registration number in VIT? 
 ## Usage
 ```sh
 # install the package
-npm install @vitspot/vit-registration-number
+npm install @acmvit/vit-registration-number
 
 ```
 
 Using in Code
 ```js
-const RegistrationNumber = require("@vitspot/vit-registration-number")
+const RegistrationNumber = require("@acmvit/vit-registration-number")
 const someNumber = new RegistrationNumber("19BCE2669")
 
 const year = someNumber.getYear()
