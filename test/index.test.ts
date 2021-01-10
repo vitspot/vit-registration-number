@@ -12,4 +12,18 @@ describe(" => Index Check", () => {
     expect(Worker.getIndex()).to.be.equal(2669);
     done();
   });
+
+  it("should throw error for numbers of insufficient length", (done) => {
+    expect(() => {
+      const Worker = new Entity("19BCE26");
+    }).to.throw();
+    done();
+  });
+
+  it("should throw error for non numeric characters in index", (done) => {
+    expect(() => {
+      const Worker = new Entity("19BCE269a");
+    }).to.throw();
+    done();
+  });
 });
