@@ -12,4 +12,9 @@ describe(" => Branch Check", () => {
     expect(Worker.getBranch()).to.be.equal("BCE");
     done();
   });
+  it("should return full branch name",(done)=>{
+    const Worker = new Entity("19BCE2669");
+    expect(Worker.getBranchName()).to.be.equal("Computer Science Engineering Core");
+    done();
+  })
 });
