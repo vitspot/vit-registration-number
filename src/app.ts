@@ -2,6 +2,7 @@ class VITRegNumber {
   private readonly regNumber: string;
   private year: number = -1;
   private branch: string = "";
+  private branchName: string = "";
   private index: number = -1;
 
   constructor(regNumber: string) {
@@ -33,31 +34,45 @@ class VITRegNumber {
       if (/^\d+$/.test(branch)) {
         throw new Error("invalid characters in branch code");
       } else {
-        if(branch === 'BCE')
-        this.branch = branch+"(Computer Science Engineering Core)"
-        else if(branch === 'BBS')
-        this.branch = branch+"(Computer Science Engineering with Specialization in Business Systems)"
-        else if(branch === 'BCB')
-        this.branch = branch+"(Computer Science Engineering specialization in Bioinformatics)"
-        else if(branch === 'BCD')
-        this.branch = branch+"(Computer Science Specialisation in Data Analytics)"
-        else if(branch === 'BCI')
-        this.branch = branch+"(Computer Science with specialization in information security)"
-        else if(branch === 'BCN')
-        this.branch = branch+"(Computer Science specialization in Networking and security)"
-        else if(branch === 'BCT')
-        this.branch = branch+"(Computer Science Engineering with Specialization in Internet of Things)"
-        else if(branch === 'BEC')
-        this.branch = branch+"(Electronics and Communication Engineering)"
-        else if(branch === 'BEE')
-        this.branch = branch+"(Electrical and Electronics engineering)"
-        else if(branch === 'BIT')
-        this.branch = branch+"(Information Technology)"
-        else if(branch === 'BAI')
-        this.branch = branch+"(Computer Science Engineering with Specialization in Artificial Intelligence and Machine Learning)"
-        else
         this.branch = branch
+        switch(this.branch){
+          case 'BCE':
+            this.branchName = "Computer Science Engineering Core";
+            break;
+          case 'BBS':
+            this.branchName = "Computer Science Engineering with Specialization in Business Systems";
+            break;
+          case 'BCB':
+            this.branchName = "Computer Science Engineering specialization in Bioinformatics";
+            break;
+          case 'BCD':
+            this.branchName = "Computer Science Specialisation in Data Analytics";
+            break;
+          case 'BCI':
+            this.branchName = "Computer Science with specialization in information security";
+            break;
+          case 'BCN':
+            this.branchName = "Computer Science specialization in Networking and security";
+            break;
+          case 'BCT':
+            this.branchName = "Computer Science Engineering with Specialization in Internet of Things";
+            break;
+          case 'BEC':
+            this.branchName = "Electronics and Communication Engineering";
+            break;
+          case 'BEE':
+            this.branchName = "Electrical and Electronics engineering";
+            break;
+          case 'BIT':
+            this.branchName = "Information Technology";
+            break;
+          case 'BAI':
+            this.branchName = "Computer Science Engineering with Specialization in Artificial Intelligence and Machine Learning";
+            break;
+          default:
+            this.branchName = this.branch;
 
+        }
       }
     } catch (e) {
       throw new Error(`Invalid Registration Number :: ${e.message}`);
@@ -74,6 +89,9 @@ class VITRegNumber {
 
   getIndex(): number {
     return this.index;
+  }
+  getBranchName(): string{
+    return this.branchName;
   }
 }
 
